@@ -36,12 +36,14 @@
             PatientList = new ListBox();
             buttonNewPatient = new Button();
             panelPatient = new Panel();
+            buttonAnamnese = new Button();
             groupBoxPatientData = new GroupBox();
+            buttonDelete = new Button();
+            buttonEdit = new Button();
             labelEmail = new Label();
             labelPhone = new Label();
             labelName = new Label();
-            buttonEdit = new Button();
-            buttonAnamnese = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)patientBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)form1BindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)form1BindingSource1).BeginInit();
@@ -70,15 +72,15 @@
             // 
             PatientList.FormattingEnabled = true;
             PatientList.ItemHeight = 15;
-            PatientList.Location = new Point(1, 12);
+            PatientList.Location = new Point(1, 57);
             PatientList.Name = "PatientList";
-            PatientList.Size = new Size(173, 439);
+            PatientList.Size = new Size(173, 394);
             PatientList.TabIndex = 5;
             PatientList.SelectedIndexChanged += PatientList_SelectedIndexChanged;
             // 
             // buttonNewPatient
             // 
-            buttonNewPatient.Location = new Point(180, 12);
+            buttonNewPatient.Location = new Point(180, 25);
             buttonNewPatient.Name = "buttonNewPatient";
             buttonNewPatient.Size = new Size(92, 27);
             buttonNewPatient.TabIndex = 6;
@@ -96,8 +98,19 @@
             panelPatient.TabIndex = 7;
             panelPatient.Paint += panel1_Paint;
             // 
+            // buttonAnamnese
+            // 
+            buttonAnamnese.Location = new Point(35, 130);
+            buttonAnamnese.Name = "buttonAnamnese";
+            buttonAnamnese.Size = new Size(75, 23);
+            buttonAnamnese.TabIndex = 4;
+            buttonAnamnese.Text = "Anamnese";
+            buttonAnamnese.UseVisualStyleBackColor = true;
+            buttonAnamnese.Click += buttonAnamnese_Click;
+            // 
             // groupBoxPatientData
             // 
+            groupBoxPatientData.Controls.Add(buttonDelete);
             groupBoxPatientData.Controls.Add(buttonEdit);
             groupBoxPatientData.Controls.Add(labelEmail);
             groupBoxPatientData.Controls.Add(labelPhone);
@@ -108,6 +121,26 @@
             groupBoxPatientData.TabIndex = 0;
             groupBoxPatientData.TabStop = false;
             groupBoxPatientData.Text = "Dados do paciente";
+            // 
+            // buttonDelete
+            // 
+            buttonDelete.Location = new Point(513, 71);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(75, 23);
+            buttonDelete.TabIndex = 5;
+            buttonDelete.Text = "Deletar";
+            buttonDelete.UseVisualStyleBackColor = true;
+            buttonDelete.Click += buttonDelete_Click;
+            // 
+            // buttonEdit
+            // 
+            buttonEdit.Location = new Point(432, 71);
+            buttonEdit.Name = "buttonEdit";
+            buttonEdit.Size = new Size(75, 23);
+            buttonEdit.TabIndex = 3;
+            buttonEdit.Text = "Editar";
+            buttonEdit.UseVisualStyleBackColor = true;
+            buttonEdit.Click += buttonEdit_Click;
             // 
             // labelEmail
             // 
@@ -136,35 +169,27 @@
             labelName.TabIndex = 0;
             labelName.Text = "Nome: ";
             // 
-            // buttonEdit
+            // label1
             // 
-            buttonEdit.Location = new Point(521, 71);
-            buttonEdit.Name = "buttonEdit";
-            buttonEdit.Size = new Size(75, 23);
-            buttonEdit.TabIndex = 3;
-            buttonEdit.Text = "Editar";
-            buttonEdit.UseVisualStyleBackColor = true;
-            buttonEdit.Click += buttonEdit_Click;
-            // 
-            // buttonAnamnese
-            // 
-            buttonAnamnese.Location = new Point(35, 130);
-            buttonAnamnese.Name = "buttonAnamnese";
-            buttonAnamnese.Size = new Size(75, 23);
-            buttonAnamnese.TabIndex = 4;
-            buttonAnamnese.Text = "Anamnese";
-            buttonAnamnese.UseVisualStyleBackColor = true;
-            buttonAnamnese.Click += buttonAnamnese_Click;
+            label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(1, 12);
+            label1.Name = "label1";
+            label1.Size = new Size(173, 42);
+            label1.TabIndex = 8;
+            label1.Text = "Pacientes";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FormHome
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(panelPatient);
             Controls.Add(buttonNewPatient);
             Controls.Add(PatientList);
             Name = "FormHome";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Psicogest";
             Load += FormHome_Load;
             ((System.ComponentModel.ISupportInitialize)patientBindingSource).EndInit();
@@ -191,5 +216,7 @@
         private Label labelEmail;
         private Button buttonEdit;
         private Button buttonAnamnese;
+        private Button buttonDelete;
+        private Label label1;
     }
 }

@@ -11,7 +11,7 @@ namespace Psicogest.Models
         public int Id { get; set; }
         public int UserId { get; set; }
         public string Name { get; set; }
-        public int Phone { get; set; }
+        public long Phone { get; set; }
         public string? Email { get; set; }
 
         public override string ToString()

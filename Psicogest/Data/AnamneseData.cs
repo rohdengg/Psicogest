@@ -26,5 +26,24 @@ namespace Psicogest.Data
                 return db.Anamneses.Where(x => x.PatientId == id).FirstOrDefault();
             }
         }
+
+        public static void UpdateAnamnese(Anamnese updatedAnamnese)
+        {
+            using (var db = new PsicogestContext())
+            {
+                db.Update(updatedAnamnese);
+                db.SaveChanges();
+            }
+        }
+
+        public static void DeleteAnamnese(int id)
+        {
+            using (var db = new PsicogestContext())
+            {
+                var anamnese = db.Anamneses.Find(id);
+                db.Remove(anamnese);
+                db.SaveChanges();
+            }
+        }
     }
 }

@@ -47,6 +47,8 @@
             textBoxMaritalStatus = new TextBox();
             textBoxSchooling = new TextBox();
             buttonSave = new Button();
+            labelBirthDay = new Label();
+            buttonEdit = new Button();
             SuspendLayout();
             // 
             // label1
@@ -132,15 +134,18 @@
             // 
             // dateTimePickerBirthDay
             // 
-            dateTimePickerBirthDay.Location = new Point(70, 99);
+            dateTimePickerBirthDay.Enabled = false;
+            dateTimePickerBirthDay.Location = new Point(70, 90);
             dateTimePickerBirthDay.Name = "dateTimePickerBirthDay";
             dateTimePickerBirthDay.Size = new Size(253, 23);
             dateTimePickerBirthDay.TabIndex = 9;
+            dateTimePickerBirthDay.Visible = false;
             // 
             // textBoxGender
             // 
             textBoxGender.Location = new Point(70, 161);
             textBoxGender.Name = "textBoxGender";
+            textBoxGender.ReadOnly = true;
             textBoxGender.Size = new Size(253, 23);
             textBoxGender.TabIndex = 10;
             // 
@@ -148,13 +153,16 @@
             // 
             textBoxEmergencyContact.Location = new Point(70, 228);
             textBoxEmergencyContact.Name = "textBoxEmergencyContact";
+            textBoxEmergencyContact.ReadOnly = true;
             textBoxEmergencyContact.Size = new Size(253, 23);
             textBoxEmergencyContact.TabIndex = 11;
+            textBoxEmergencyContact.KeyPress += textBoxEmergencyContact_KeyPress;
             // 
             // textBoxMainComplaint
             // 
             textBoxMainComplaint.Location = new Point(70, 289);
             textBoxMainComplaint.Name = "textBoxMainComplaint";
+            textBoxMainComplaint.ReadOnly = true;
             textBoxMainComplaint.Size = new Size(253, 23);
             textBoxMainComplaint.TabIndex = 12;
             // 
@@ -162,6 +170,7 @@
             // 
             textBoxSymptoms.Location = new Point(70, 359);
             textBoxSymptoms.Name = "textBoxSymptoms";
+            textBoxSymptoms.ReadOnly = true;
             textBoxSymptoms.Size = new Size(253, 23);
             textBoxSymptoms.TabIndex = 13;
             // 
@@ -169,6 +178,7 @@
             // 
             textBoxJob.Location = new Point(70, 428);
             textBoxJob.Name = "textBoxJob";
+            textBoxJob.ReadOnly = true;
             textBoxJob.Size = new Size(253, 23);
             textBoxJob.TabIndex = 14;
             // 
@@ -176,6 +186,7 @@
             // 
             textBoxMedicines.Location = new Point(70, 494);
             textBoxMedicines.Name = "textBoxMedicines";
+            textBoxMedicines.ReadOnly = true;
             textBoxMedicines.Size = new Size(253, 23);
             textBoxMedicines.TabIndex = 15;
             // 
@@ -183,6 +194,7 @@
             // 
             textBoxMaritalStatus.Location = new Point(70, 556);
             textBoxMaritalStatus.Name = "textBoxMaritalStatus";
+            textBoxMaritalStatus.ReadOnly = true;
             textBoxMaritalStatus.Size = new Size(253, 23);
             textBoxMaritalStatus.TabIndex = 16;
             // 
@@ -190,24 +202,53 @@
             // 
             textBoxSchooling.Location = new Point(70, 614);
             textBoxSchooling.Name = "textBoxSchooling";
+            textBoxSchooling.ReadOnly = true;
             textBoxSchooling.Size = new Size(253, 23);
             textBoxSchooling.TabIndex = 17;
             // 
             // buttonSave
             // 
+            buttonSave.Enabled = false;
             buttonSave.Location = new Point(145, 665);
             buttonSave.Name = "buttonSave";
             buttonSave.Size = new Size(75, 23);
             buttonSave.TabIndex = 18;
             buttonSave.Text = "Salvar";
             buttonSave.UseVisualStyleBackColor = true;
+            buttonSave.Visible = false;
             buttonSave.Click += buttonSave_Click;
+            // 
+            // labelBirthDay
+            // 
+            labelBirthDay.Enabled = false;
+            labelBirthDay.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelBirthDay.Location = new Point(70, 87);
+            labelBirthDay.Name = "labelBirthDay";
+            labelBirthDay.Size = new Size(242, 27);
+            labelBirthDay.TabIndex = 19;
+            labelBirthDay.Text = "data de nascimento";
+            labelBirthDay.TextAlign = ContentAlignment.MiddleLeft;
+            labelBirthDay.Visible = false;
+            // 
+            // buttonEdit
+            // 
+            buttonEdit.Enabled = false;
+            buttonEdit.Location = new Point(145, 665);
+            buttonEdit.Name = "buttonEdit";
+            buttonEdit.Size = new Size(75, 23);
+            buttonEdit.TabIndex = 20;
+            buttonEdit.Text = "Editar";
+            buttonEdit.UseVisualStyleBackColor = true;
+            buttonEdit.Visible = false;
+            buttonEdit.Click += buttonEdit_Click;
             // 
             // FormAnamnese
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(433, 702);
+            Controls.Add(buttonEdit);
+            Controls.Add(labelBirthDay);
             Controls.Add(buttonSave);
             Controls.Add(textBoxSchooling);
             Controls.Add(textBoxMaritalStatus);
@@ -228,6 +269,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "FormAnamnese";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormAnamnese";
             Load += FormAnamnese_Load;
             ResumeLayout(false);
@@ -255,5 +297,7 @@
         private TextBox textBoxMaritalStatus;
         private TextBox textBoxSchooling;
         private Button buttonSave;
+        private Label labelBirthDay;
+        private Button buttonEdit;
     }
 }
