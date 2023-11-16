@@ -37,6 +37,12 @@ namespace Psicogest.Forms
                 MessageBox.Show("Por favor, preencha um número de telefone");
                 return;
             }
+            if (textBoxName.Text == "")
+            {
+                MessageBox.Show("Por favor, preencha um nome para o paciente");
+                return;
+            }
+
             patient.Name = textBoxName.Text;
             patient.Phone = long.Parse(textBoxPhone.Text);
             patient.Email = textBoxEmail.Text;
