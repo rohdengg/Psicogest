@@ -20,11 +20,6 @@ namespace Psicogest
             InitializeComponent();
         }
 
-        private void FormLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -65,11 +60,6 @@ namespace Psicogest
         private void onHomeClose(object? sender, FormClosedEventArgs e)
         {
             this.Close();
-        }
-
-        private void groupBoxLogin_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)

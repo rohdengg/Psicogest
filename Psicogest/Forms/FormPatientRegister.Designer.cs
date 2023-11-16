@@ -123,8 +123,6 @@
             Name = "FormPatientRegister";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Novo paciente";
-            FormClosed += FormPatientRegister_FormClosed;
-            Load += FormPatientRegister_Load;
             groupBoxNewPatient.ResumeLayout(false);
             groupBoxNewPatient.PerformLayout();
             ResumeLayout(false);

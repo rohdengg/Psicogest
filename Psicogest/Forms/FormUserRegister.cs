@@ -19,36 +19,6 @@ namespace Psicogest
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormUserRegister_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxUserName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             if (textBoxUserName.Text == "" || textBoxUserPassword.Text.Length < 7)

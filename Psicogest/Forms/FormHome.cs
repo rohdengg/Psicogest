@@ -22,15 +22,8 @@ namespace Psicogest
             PatientList.DataSource = PatientData.GetAllPatients(user.Id);
         }
 
-        private void FormHome_activated(object sender, EventArgs e)
-        {
-
-        }
-
         protected virtual void OnFormClose(FormClosedEventArgs e)
         {
-
-
         }
 
         private void buttonNewPatient_Click(object sender, EventArgs e)
@@ -47,22 +40,12 @@ namespace Psicogest
             this.Focus();
         }
 
-        private void patientPanel1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void PatientList_SelectedIndexChanged(object sender, EventArgs e)
         {
             var patient = PatientList.SelectedItem as Patient;
             labelName.Text = "Nome: " + patient?.Name;
             labelPhone.Text = "Telefone: " + patient?.Phone;
             labelEmail.Text = "Email: " + patient?.Email;
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 

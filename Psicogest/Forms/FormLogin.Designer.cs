@@ -54,7 +54,6 @@
             groupBoxLogin.TabIndex = 0;
             groupBoxLogin.TabStop = false;
             groupBoxLogin.Text = "Login";
-            groupBoxLogin.Enter += groupBoxLogin_Enter;
             // 
             // buttonRegister
             // 
@@ -128,7 +127,6 @@
             Name = "FormLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
-            Load += FormLogin_Load;
             groupBoxLogin.ResumeLayout(false);
             groupBoxLogin.PerformLayout();
             ResumeLayout(false);

@@ -67,15 +67,5 @@ namespace Psicogest.Forms
                 textBoxPhone.Focus();
             }
         }
-
-        private void FormPatientRegister_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormPatientRegister_FormClosed(object sender, FormClosedEventArgs e)
-        {
-
-        }
     }
 }

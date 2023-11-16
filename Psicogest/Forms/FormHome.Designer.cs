@@ -96,7 +96,6 @@
             panelPatient.Name = "panelPatient";
             panelPatient.Size = new Size(608, 380);
             panelPatient.TabIndex = 7;
-            panelPatient.Paint += panel1_Paint;
             // 
             // buttonAnamnese
             // 

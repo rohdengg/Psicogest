@@ -113,7 +113,6 @@
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
             groupBox1.Text = "Editar paciente";
-            groupBox1.Enter += groupBox1_Enter;
             // 
             // FormEditPatient
             // 

@@ -54,7 +54,6 @@
             groupBoxUserRegister.TabIndex = 0;
             groupBoxUserRegister.TabStop = false;
             groupBoxUserRegister.Text = "Novo usuário";
-            groupBoxUserRegister.Enter += groupBox1_Enter;
             // 
             // buttonRegister
             // 
@@ -90,7 +89,6 @@
             label2.Size = new Size(39, 15);
             label2.TabIndex = 4;
             label2.Text = "Senha";
-            label2.Click += label2_Click;
             // 
             // textBoxUserConfirmPassword
             // 
@@ -98,7 +96,6 @@
             textBoxUserConfirmPassword.Name = "textBoxUserConfirmPassword";
             textBoxUserConfirmPassword.Size = new Size(215, 23);
             textBoxUserConfirmPassword.TabIndex = 3;
-            textBoxUserConfirmPassword.TextChanged += textBox2_TextChanged;
             // 
             // textBoxUserName
             // 
@@ -106,7 +103,6 @@
             textBoxUserName.Name = "textBoxUserName";
             textBoxUserName.Size = new Size(215, 23);
             textBoxUserName.TabIndex = 2;
-            textBoxUserName.TextChanged += textBoxUserName_TextChanged;
             // 
             // label1
             // 
@@ -116,7 +112,6 @@
             label1.Size = new Size(98, 15);
             label1.TabIndex = 1;
             label1.Text = "Nome de usuário";
-            label1.Click += label1_Click;
             // 
             // FormUserRegister
             // 
@@ -128,7 +123,6 @@
             Name = "FormUserRegister";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormUserRegister";
-            Load += FormUserRegister_Load;
             groupBoxUserRegister.ResumeLayout(false);
             groupBoxUserRegister.PerformLayout();
             ResumeLayout(false);

@@ -59,11 +59,6 @@ namespace Psicogest.Forms
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBoxPhone_KeyPress(object sender, KeyPressEventArgs e)
         {
             int key = (int)e.KeyChar;
