@@ -47,14 +47,6 @@ namespace Psicogest
                 Password = textBoxUserPassword.Text,
             };
 
-            if (!(user.Password == textBoxUserConfirmPassword.Text))
-            {
-                MessageBox.Show("As senhas digitadas são diferentes, tente novamente.");
-                textBoxUserConfirmPassword.Text = "";
-                textBoxUserConfirmPassword.Focus();
-                return;
-            }
-
             try
             {
                 UserData.AddUserToDb(user);
